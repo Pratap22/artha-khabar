@@ -26,10 +26,18 @@ class AppTheme {
           fontWeight: FontWeight.w600,
         ),
       ),
-      tabBarTheme: const TabBarThemeData(
+      tabBarTheme: TabBarThemeData(
         indicatorColor: primaryRed,
         labelColor: primaryRed,
         unselectedLabelColor: Colors.grey,
+        labelStyle: GoogleFonts.mukta(
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+        ),
+        unselectedLabelStyle: GoogleFonts.mukta(
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }

@@ -110,8 +110,11 @@ class _HomeScreenState extends State<HomeScreen>
       appBar: AppBar(
         leading: Builder(
           builder: (context) => IconButton(
-            icon: const Icon(Icons.menu),
+            icon: Icon(Icons.menu, color: Colors.green.shade700, size: 28),
             onPressed: () => Scaffold.of(context).openDrawer(),
+            style: IconButton.styleFrom(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            ),
           ),
         ),
         title: _buildAppBarTitle(),
@@ -133,13 +136,13 @@ class _HomeScreenState extends State<HomeScreen>
 
   Widget _buildAppBarTitle() {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 4),
+      padding: const EdgeInsets.symmetric(vertical: 6),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset(
             'assets/images/logo_main.png',
-            height: 32,
+            height: 44,
             fit: BoxFit.contain,
             errorBuilder: (context, error, stackTrace) => const Text(
               'अर्थ खबर',
