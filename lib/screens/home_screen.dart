@@ -108,6 +108,7 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         leading: Builder(
           builder: (context) => IconButton(
             icon: Icon(Icons.menu, color: Colors.green.shade700, size: 28),
@@ -137,6 +138,7 @@ class _HomeScreenState extends State<HomeScreen>
   Widget _buildAppBarTitle() {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 6),
+      alignment: Alignment.center,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
