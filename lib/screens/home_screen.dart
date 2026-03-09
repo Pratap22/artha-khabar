@@ -108,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 64,
+        toolbarHeight: 68,
         centerTitle: true,
         leading: Builder(
           builder: (context) => IconButton(
