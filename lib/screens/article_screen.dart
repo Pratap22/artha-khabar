@@ -28,10 +28,24 @@ class ArticleScreen extends StatelessWidget {
     return dateStr;
   }
 
-  Future<void> _openNewsUrl() async {
+  Future<void> _openNewsUrl(BuildContext context) async {
     final uri = Uri.parse(post.newsUrl);
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    try {
+      final launched = await launchUrl(
+        uri,
+        mode: LaunchMode.externalApplication,
+      );
+      if (!launched && context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Could not open link')),
+        );
+      }
+    } catch (e) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Could not open link: $e')),
+        );
+      }
     }
   }
 
@@ -106,7 +120,7 @@ class ArticleScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton.icon(
-                      onPressed: _openNewsUrl,
+                      onPressed: () => _openNewsUrl(context),
                       icon: const Icon(Icons.open_in_new, size: 18),
                       label: const Text('Read more'),
                       style: ElevatedButton.styleFrom(
