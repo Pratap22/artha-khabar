@@ -31,7 +31,7 @@ class AboutScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             Text(
-              AppConstants.tagline,
+              'खबरसँगै खबरदारी',
               style: const TextStyle(
                 fontSize: 16,
                 color: AppTheme.primaryBlue,

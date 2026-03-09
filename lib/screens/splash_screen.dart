@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import '../constants/app_constants.dart';
 import '../theme/app_theme.dart';
 import 'home_screen.dart';
 
@@ -50,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             const SizedBox(height: 16),
             Text(
-              AppConstants.tagline,
+              'खबरसँगै खबरदारी',
               style: const TextStyle(
                 color: AppTheme.primaryBlue,
                 fontSize: 14,

@@ -108,6 +108,7 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 64,
         centerTitle: true,
         leading: Builder(
           builder: (context) => IconButton(
@@ -136,48 +137,19 @@ class _HomeScreenState extends State<HomeScreen>
   }
 
   Widget _buildAppBarTitle() {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 6),
-      alignment: Alignment.center,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Image.asset(
-            'assets/images/logo_main.png',
-            height: 44,
-            fit: BoxFit.contain,
-            errorBuilder: (context, error, stackTrace) => const Text(
-              'अर्थ खबर',
-              style: TextStyle(
-                color: AppTheme.primaryRed,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+    return Center(
+      child: Image.asset(
+        'assets/images/logo_main.png',
+        height: 64,
+        fit: BoxFit.contain,
+        errorBuilder: (context, error, stackTrace) => const Text(
+          'अर्थ खबर',
+          style: TextStyle(
+            color: AppTheme.primaryRed,
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
           ),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                AppConstants.tagline,
-                style: TextStyle(
-                  color: Colors.grey[600],
-                  fontSize: 10,
-                ),
-              ),
-              const SizedBox(width: 4),
-              Icon(Icons.play_circle_fill, size: 12, color: AppTheme.primaryRed),
-              Text(
-                ' Live',
-                style: TextStyle(
-                  color: AppTheme.primaryRed,
-                  fontSize: 10,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-        ],
+        ),
       ),
     );
   }

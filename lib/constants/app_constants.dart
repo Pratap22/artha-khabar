@@ -15,7 +15,6 @@ class AppConstants {
   static const String instagramUrl = 'https://www.instagram.com/arthakhabar';
 
   // Brand
-  static const String tagline = 'खबरसँगै खबरदारी';
   static const String footerText = "Nepal's Leading Economic News portal.";
   static const String copyright = 'a digital product of Media Hundred Pvt. Ltd. All rights reserved.';
 }
