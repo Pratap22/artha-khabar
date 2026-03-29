@@ -1,0 +1,8 @@
+# Copy this file to key.properties and fill in your values.
+# key.properties is gitignored — do not commit it.
+#
+# storeFile: absolute path to your .jks file
+storePassword=YOUR_KEYSTORE_PASSWORD
+keyPassword=YOUR_KEY_PASSWORD
+keyAlias=YOUR_KEY_ALIAS
+storeFile=/Users/lwp/eservices-keystore.jks
